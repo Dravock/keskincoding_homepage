@@ -1,9 +1,24 @@
-body{
-    @apply bg-black/80
-}
-
 .box-debugger{
     @apply border border-red-600;
+}
+
+
+
+ul {
+    list-style-type: circle;
+}
+
+h1{
+    @apply text-3xl ;
+}
+h2{
+    @apply text-2xl ;
+}
+h3{
+    @apply text-xl ;
+}
+h4{
+    @apply text-lg ;
 }
 
   /* BUTTON STYLING */
@@ -52,7 +67,7 @@ body{
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #0087ca;
+    @apply text-black text-2xl ;
 }
 
 .hover-underline-animation::after {
@@ -63,9 +78,9 @@ body{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    @apply bg-[#f5a523] ;
 }
 
 .hover-underline-animation:hover::after {

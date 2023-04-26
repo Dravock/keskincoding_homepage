@@ -1,11 +1,14 @@
 // PATHS IMPORT
-import AppS from './Pages/Public/AppS.js'
+import App from './Pages/Public/App.js';
+import Impressum from './Pages/Public/Impressum.js';
+import Datenschutz from './Pages/Public/Datenschutz.js';
 
 // IMPORTS FOR WEBSITE DESIGN
 import { useEffect } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { Validation } from './includes/functions/Validation';
 import Cookies from 'universal-cookie';
+
 
 
 function Router() {
@@ -32,7 +35,9 @@ return (
             {/* REACT ROUTER ROUTES */}
             <Routes>
                 {/* PUBLIC PAGES */}
-                <Route path='/' element={<AppS />}/>
+                <Route path='/' element={<App />}/>
+                <Route path='/impressum' element={<Impressum />}/>
+                <Route path='/privacy-policy' element={<Datenschutz />}/>
 
                 {/* Private Pages */}
 

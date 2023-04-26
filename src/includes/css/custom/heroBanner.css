@@ -1,0 +1,7 @@
+.hero-banner{
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    min-height: 100px;
+    @apply min-h-[100px] md:min-h-[200px];
+}
