@@ -24,11 +24,11 @@ function Skills_w_IMG() {
 
 
 return (
-    <section id="Skills-w-Img">
+    <section id="Skills-w-Img" className='mt:0 sm:-mt-5'>
         <div className='grid grid-cols-1 sm:grid-cols-12 mt-5'>
             <div className=' col-span-6 order-1 sm:order-last'>
-                <div className=''>
-                    <p className='ml-4 font-bold'>Progammiersprachen die ich gelernt habe:</p>
+                <div className='mb-5 sm:mb-0'>
+                    <p className='ml-3 font-bold'>Progammiersprachen die ich gelernt habe:</p>
                     <ul className=' ml-14' style={{listStyleType:"square"}}>
                         <div className='grid grid-cols-12'>
                             <div className='col-span-6'>

@@ -14,7 +14,7 @@ function App() {
 
 
 return (
-  <div className="">
+  <>
     <Header />
     <Hero heroIMG={HeroIMG}/>
     <section id="PageContent" className='bg-white px-5'>
@@ -25,7 +25,7 @@ return (
     <section id="Footer">
       <div>Hier kommt der Footer </div>
     </section>
-  </div>
+  </>
   )
 }
 

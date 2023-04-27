@@ -12,9 +12,9 @@ return (
 
         <div className='grid grid-cols-1 sm:grid-cols-12  pt-5'>      
             <div className=' col-span-6 lg:col-span-6 order-1 sm:order-1'>
-                <div className='grid grid-cols-12 sm:items-center md:items-start '>
-                    <h1 className='col-span-12  pt-0 sm:pt-5 ml-5 sm:ml-0 font-bold text-3xl underline'>Wer bin ich?</h1>
-                    <span className='col-span-12 inline-block align-middle mt-0  lg:mt-4 px-4 sm:px-0 sm:mr-3 '>
+                <div className='grid grid-cols-12'>
+                    <h1 className='col-span-12 font-bold text-3xl underline pt-2 sm:pt-0  ml-5 sm:ml-0'>Wer bin ich?</h1>
+                    <span className='col-span-12 inline-block align-middle mt-0  sm:mt-2 px-4 sm:px-0 sm:mr-3 text-justify'>
                         {ContentText.appJS_1.text}
                     </span>
                 </div>
