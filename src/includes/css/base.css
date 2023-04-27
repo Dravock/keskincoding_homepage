@@ -1,3 +1,7 @@
+body{
+    @apply bg-black/60 min-h-screen w-full m-0 p-0 ;
+}
+
 .box-debugger{
     @apply border border-red-600;
 }
@@ -50,8 +54,8 @@ h4{
 .btn-red {
     @apply
     text-black 
-    bg-red-500 
-    hover:bg-red-300
+    bg-red-700/95 
+    hover:bg-red-500
     sm:font-bold
     p-1
     sm:p-2
