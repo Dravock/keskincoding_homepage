@@ -18,10 +18,6 @@ function Header() {
         { title:"Contact Us",url:"/contact-us" },
     ]
 
-const routeHandler =(url)=>{
-    console.log("yes",url)
-    
-}
 
 const logout =()=>{
     cookies.remove('token', { path: '/todo-app' });
@@ -46,38 +42,40 @@ const closeMobileNav =()=>{
 }
 
 return (
-    <div className='flex justify-between  bg-blue-500/40'>
-        <div className='flex items-center'>
-            <img src={Logo} width={"80px"} height={"80px"} alt="company-logo" className='p-1'/>
-            <h3 className='font-bold md:text-2xl italic '>Keskin Software <br/> <span className='ml-10 '>Solution</span></h3>
-        </div>
-        <div className=''>
-            
-        </div>
-        <div className=' flex pb-2'>
-            <div className='sm:hidden mt-3 mr-4 cursor-pointer' >
-                <FontAwesomeIcon icon={faBars} className="absolute right-3 top-3 text-black justify-end" size='3x' onClick={()=>openMobileNav()}/>
+    <section id="Navbar">
+        <div className='flex justify-between  bg-blue-500/40'>
+            <div className='flex items-center'>
+                <img src={Logo} width={"80px"} height={"80px"} alt="company-logo" className='p-1'/>
+                <h3 className='font-bold md:text-2xl italic '>Keskin Software <br/> <span className='ml-10 '>Solution</span></h3>
+            </div>
+            <div className=''>
+                
+            </div>
+            <div className=' flex pb-2'>
+                <div className='sm:hidden mt-3 mr-4 cursor-pointer' >
+                    <FontAwesomeIcon icon={faBars} className="absolute right-3 top-3 text-black justify-end" size='3x' onClick={()=>openMobileNav()}/>
 
-            </div>
-            <div id="mobile-nav-open" className='absolute h-[101%]  bg-black/95 z-30 top-0 right-0 w-full hidden'>
-                <div className='flex justify-center'>
-                    <h2 className=' text-white  text-2xl font-bold mt-4 '>KSS</h2>
-                    <FontAwesomeIcon icon={faXmark} className="absolute right-7 top-2 text-white justify-end cursor-pointer" size='3x' onClick={()=>closeMobileNav()}/>
                 </div>
-                <div className='grid grid-cols-12 text-white mt-20'>
-                    {navbarLinks && navbarLinks.map(({title,url},index) =>
-                        <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2' onClick={()=>navigate(url)} key={index}>{title}</button>
-                    )}
+                <div id="mobile-nav-open" className='absolute h-[101%]  bg-black/95 z-30 top-0 right-0 w-full hidden'>
+                    <div className='flex justify-center'>
+                        <h2 className=' text-white  text-2xl font-bold mt-4 '>KSS</h2>
+                        <FontAwesomeIcon icon={faXmark} className="absolute right-7 top-2 text-white justify-end cursor-pointer" size='3x' onClick={()=>closeMobileNav()}/>
+                    </div>
+                    <div className='grid grid-cols-12 text-white mt-20'>
+                        {navbarLinks && navbarLinks.map(({title,url},index) =>
+                            <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2' onClick={()=>navigate(url)} key={index}>{title}</button>
+                        )}
+                    </div>
                 </div>
-            </div>
 
-            <div id="desktop-nav-bar" className='hidden sm:flex  mt-8 '>     
-                    {navbarLinks && navbarLinks.map(({title,url},index)=>
-                        <button className='col-span-full text-lg md:text-xl font-bold mx-2 hover-underline-animation' onClick={()=>navigate(url)} key={index}>{title}</button>
-                    )}
+                <div id="desktop-nav-bar" className='hidden sm:flex  mt-8 '>     
+                        {navbarLinks && navbarLinks.map(({title,url},index)=>
+                            <button className='col-span-full text-lg md:text-xl font-bold mx-2 hover-underline-animation' onClick={()=>navigate(url)} key={index}>{title}</button>
+                        )}
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 )}
 
 export default Header
