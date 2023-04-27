@@ -8,6 +8,9 @@ import { useEffect } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { Validation } from './includes/functions/Validation';
 import Cookies from 'universal-cookie';
+import MyProjects from './Pages/Public/MyProjects.js';
+import Services from './Pages/Public/Services.js';
+import ContactUs from './Pages/Public/ContactUs.js';
 
 
 
@@ -38,6 +41,9 @@ return (
                 <Route path='/' element={<App />}/>
                 <Route path='/impressum' element={<Impressum />}/>
                 <Route path='/privacy-policy' element={<Datenschutz />}/>
+                <Route path='/meine-projekte' element={<MyProjects />}/>
+                <Route path='/services' element={<Services />}/>
+                <Route path='/contact-us' element={<ContactUs />}/>
 
                 {/* Private Pages */}
 

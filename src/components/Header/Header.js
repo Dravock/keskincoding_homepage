@@ -10,14 +10,18 @@ function Header() {
 
     const cookies = new Cookies()
     const navigate = useNavigate()
-    const actullURL = window.location.href
-    const activLink = "text-[#f5a523]"
 
-useEffect(() => {
-    if(actullURL ==="http://localhost:3001/"){
+    const navbarLinks = [
+        { title:"Home",url:"/" },
+        { title:"Meine Projekte",url:"/meine-projekte" },
+        { title:"Services",url:"/services" },
+        { title:"Contact Us",url:"/contact-us" },
+    ]
 
-    }
-}, []);
+const routeHandler =(url)=>{
+    console.log("yes",url)
+    
+}
 
 const logout =()=>{
     cookies.remove('token', { path: '/todo-app' });
@@ -58,21 +62,19 @@ return (
             <div id="mobile-nav-open" className='absolute h-[101%]  bg-black/95 z-30 top-0 right-0 w-full hidden'>
                 <div className='flex justify-center'>
                     <h2 className=' text-white  text-2xl font-bold mt-4 '>KSS</h2>
-                    <FontAwesomeIcon icon={faXmark} className="absolute right-3 top-2 text-white justify-end" size='3x' onClick={()=>closeMobileNav()}/>
+                    <FontAwesomeIcon icon={faXmark} className="absolute right-7 top-2 text-white justify-end cursor-pointer" size='3x' onClick={()=>closeMobileNav()}/>
                 </div>
                 <div className='grid grid-cols-12 text-white mt-20'>
-                    <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2 '>Home</button>
-                    <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2 '>Meine Projekte</button>
-                    <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2 '>Services</button>
-                    <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2 '>Contact us</button>
+                    {navbarLinks && navbarLinks.map(({title,url},index) =>
+                        <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2' onClick={()=>navigate(url)} key={index}>{title}</button>
+                    )}
                 </div>
             </div>
 
             <div id="desktop-nav-bar" className='hidden sm:flex  mt-8 '>     
-                <button className='text-lg md:text-xl font-bold mx-2 hover-underline-animation'>Home</button>
-                <button className='text-lg md:text-xl font-bold mx-2 hover-underline-animation'>Meine Projekte</button>
-                <button className='text-lg md:text-xl font-bold mx-2 hover-underline-animation'>Services</button>
-                <button className='text-lg md:text-xl font-bold mx-2 hover-underline-animation'>Contact us</button>
+                    {navbarLinks && navbarLinks.map(({title,url},index)=>
+                        <button className='col-span-full text-lg md:text-xl font-bold mx-2 hover-underline-animation' onClick={()=>navigate(url)} key={index}>{title}</button>
+                    )}
             </div>
         </div>
     </div>
