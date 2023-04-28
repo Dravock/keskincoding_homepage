@@ -4,4 +4,6 @@
 
 /* CUSTOM CSS IMPORTS */
 @import "includes/css/base.css";
-@import "includes/css/custom/heroBanner.css" 
+@import "includes/css/custom/buttons.css"; 
+@import "includes/css/custom/heroBanner.css"; 
+@import "includes/css/custom/footer.css"; 
