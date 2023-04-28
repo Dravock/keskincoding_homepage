@@ -1,5 +1,5 @@
 body{
-    @apply bg-black/60 min-h-screen w-full m-0 p-0 ;
+    @apply min-h-screen w-full m-0 p-0 ;
 }
 
 .box-debugger{
