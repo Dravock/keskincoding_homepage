@@ -1,5 +1,5 @@
 footer {
-    @apply bg-black/90 text-center !text-white grid grid-cols-1 sm:grid-cols-12;
+    @apply bg-black/90 text-center !text-white grid grid-cols-1 sm:grid-cols-12 pb-2;
 }
 
 

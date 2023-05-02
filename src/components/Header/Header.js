@@ -63,7 +63,7 @@ return (
                     </div>
                     <div className='grid grid-cols-12 text-white mt-20'>
                         {navbarLinks && navbarLinks.map(({title,url},index) =>
-                            <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2' onClick={()=>navigate(url)} key={index}>{title}</button>
+                            {title && title === "Meine Projekte" ? <button className='col-span-full py-6 text-lg md:text-xl font-bold mx-2' onClick={()=>navigate(url)} key={index}>{title}</button> : <p>hi</p>}
                         )}
                     </div>
                 </div>

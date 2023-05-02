@@ -8,7 +8,7 @@ const ContentText = [
     },
     {
         text_cta_1:"Konnte ich ihr Intresse wecken?",
-        text_cta_2:"Dann Kontieren Sie mich ganz einfach über mein Kontaktformular!",
+        text_cta_2:"Dann Kontaktieren Sie uns ganz einfach über unser Kontaktformular!",
     }
 ]
 

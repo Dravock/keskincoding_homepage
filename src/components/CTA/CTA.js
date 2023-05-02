@@ -11,11 +11,11 @@ return (
             {text && text.map(( {text_cta_1,text_cta_2},index) =>
             <div className='text-center font-bold' key={index}>
                 <h2 className='text-3xl'>{text_cta_1}</h2>
-                <h3 className='text-2xl'>{text_cta_2}</h3>
+                <p className='text-lg'>{text_cta_2}</p>
             </div>
             )}
             <div className='text-center'>
-                <button className='btn-red' onClick={()=>navigate('/contact-us')}>Kontaktformular</button>
+                <button className='btn bg-[#D2042D] px-5' onClick={()=>navigate('/contact-us')}>Zum Kontaktformular</button>
             </div>
         </div>
     </section>

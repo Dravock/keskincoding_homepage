@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function Text_with_IMG(props) {
-    const {headline,text,pos,space,imgSRC,altDesc,textClass}=props
+    const {headline,text,pos,space,imgSRC,altDesc,textClass,spaceHeader}=props
     var position
 
 const getPosition =()=>{
@@ -22,7 +22,7 @@ return (
         <div className={`grid grid-cols-1 sm:grid-cols-12`}>      
             <div className={`col-span-6 ${getPosition()} `}>
                 <div className='grid grid-cols-12 '>
-                    { headline !== undefined ? <h1 className='col-span-12 font-bold text-2xl underline pt-2 sm:pt-0  ml-5 sm:ml-0'>{headline}</h1> : <span></span>}
+                    { headline !== undefined ? <h2 className={`col-span-12 font-bold text-2xl underline ${spaceHeader}`}>{headline}</h2> : <span></span>}
                         <p className={`col-span-12 ${textClass}`}>
                             {text}
                         </p>
